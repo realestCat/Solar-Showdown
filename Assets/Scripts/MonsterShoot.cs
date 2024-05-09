@@ -15,11 +15,11 @@ public class MonsterShoot : MonoBehaviour
     public float projectileSpeed = 10f;
     
     public float fireRate;
-    private float timeToFire;
+    private float _timeToFire;
 
     private void Start()
     {
-        timeToFire = fireRate;
+        _timeToFire = fireRate;
     }
 
     // Update is called once per frame
@@ -47,17 +47,18 @@ public class MonsterShoot : MonoBehaviour
 
     private void Shoot()
     {
-        if (timeToFire <= 0f)
+        if (_timeToFire <= 0f)
         {
+            transform.LookAt(target);
             GameObject projectile = Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             rb.velocity = firingPoint.up * projectileSpeed; 
             
-            timeToFire = fireRate;
+            _timeToFire = fireRate;
         }
         else
         {
-            timeToFire -= Time.deltaTime;
+            _timeToFire -= Time.deltaTime;
         }
     }
 }
