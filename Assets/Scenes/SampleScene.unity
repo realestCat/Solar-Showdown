@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 115363337}
   - component: {fileID: 115363336}
   - component: {fileID: 115363335}
+  - component: {fileID: 115363338}
   m_Layer: 0
   m_Name: Enemy Prototype
   m_TagString: Untagged
@@ -153,9 +154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7cb9d36b47c34f0983f92cfb0ca64f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 0}
   target: {fileID: 0}
   distanceToShoot: 5
   firingPoint: {fileID: 0}
+  projectileSpeed: 10
   fireRate: 0
 --- !u!212 &115363336
 SpriteRenderer:
@@ -224,6 +227,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &115363338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115363334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40de324315595474aa4cd96587cc3aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1965765912}
+  speed: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +302,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -326,6 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1943559587}
   - component: {fileID: 1943559586}
+  - component: {fileID: 1943559588}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -400,6 +418,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1943559588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943559585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40de324315595474aa4cd96587cc3aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1965765912}
+  speed: 5
 --- !u!1 &1965765912
 GameObject:
   m_ObjectHideFlags: 0
