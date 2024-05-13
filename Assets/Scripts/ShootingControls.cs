@@ -34,7 +34,7 @@ public class ShootingControl : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
         shootPoint.rotation = rotation;
-        transform.rotation = rotation;
+        //transform.rotation = rotation;
     }
 
     void Shoot()

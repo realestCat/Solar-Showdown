@@ -49,7 +49,7 @@ public class MonsterShoot : MonoBehaviour
     {
         if (_timeToFire <= 0f)
         {
-            transform.LookAt(target);
+            firingPoint.LookAt(target);
             GameObject projectile = Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             rb.velocity = firingPoint.up * projectileSpeed; 
