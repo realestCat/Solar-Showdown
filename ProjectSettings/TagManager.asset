@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - No Passing
+  - 
   - 
   - 
   - 
@@ -40,22 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 2333039773
-    locked: 0
-  - name: Object
-    uniqueID: 1604257101
-    locked: 0
-  - name: Player
-    uniqueID: 4148031223
-    locked: 0
-  - name: Above Object
-    uniqueID: 930801637
-    locked: 0
-  - name: Weather
-    uniqueID: 2715948075
-    locked: 0
-  - name: UI
-    uniqueID: 688193481
     locked: 0
