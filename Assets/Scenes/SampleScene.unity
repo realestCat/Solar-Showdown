@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &87195213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 87195214}
+  m_Layer: 0
+  m_Name: FiringPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &87195214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87195213}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 115363337}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &115363334
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,12 +185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7cb9d36b47c34f0983f92cfb0ca64f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 716872696146792423, guid: b5a44a0b3b1334b1ea30c5479d27fa56, type: 3}
   target: {fileID: 0}
-  distanceToShoot: 5
-  firingPoint: {fileID: 0}
-  projectileSpeed: 10
-  fireRate: 0
+  distanceToShoot: 20
+  firingPoint: {fileID: 87195214}
+  projectileSpeed: 1
+  fireRate: 1
 --- !u!212 &115363336
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -202,7 +233,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.8448343, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -224,7 +255,8 @@ Transform:
   m_LocalPosition: {x: -5.74, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 87195214}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &115363338
@@ -240,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1965765912}
-  speed: 5
+  speed: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,11 +461,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53d81686ab4bb4be799a0d365d5a23f1, type: 3}
---- !u!1 &918070191 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 768427897638393265, guid: 53d81686ab4bb4be799a0d365d5a23f1, type: 3}
-  m_PrefabInstance: {fileID: 721536956}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1943559585
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1965765912}
-  speed: 5
+  speed: 0
 --- !u!1 &1965765912
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee97d145c91cd456da0c836b48d1a438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 918070191}
+  projectilePrefab: {fileID: 768427897638393265, guid: 53d81686ab4bb4be799a0d365d5a23f1, type: 3}
   shootPoint: {fileID: 536257653}
   projectileSpeed: 10
   shootCooldown: 0.5

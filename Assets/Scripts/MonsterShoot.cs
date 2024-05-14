@@ -49,7 +49,7 @@ public class MonsterShoot : MonoBehaviour
     {
         if (_timeToFire <= 0f)
         {
-            firingPoint.LookAt(target);
+            RotateTowardsTarget();
             GameObject projectile = Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             rb.velocity = firingPoint.up * projectileSpeed; 
@@ -61,4 +61,15 @@ public class MonsterShoot : MonoBehaviour
             _timeToFire -= Time.deltaTime;
         }
     }
+    
+    void RotateTowardsTarget()
+    {
+        Vector3 direction = target.position - transform.position;
+        direction.z = 0f;
+
+        Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
+
+        firingPoint.rotation = rotation;
+    }
 }
+
