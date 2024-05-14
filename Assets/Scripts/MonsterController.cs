@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class MonsterControll : MonoBehaviour
 {
+    public int atk;
+    public float attactDelay;
+
+
 
     public GameObject target;
     Vector3 dir;
