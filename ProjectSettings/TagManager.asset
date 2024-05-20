@@ -47,7 +47,7 @@ TagManager:
   - name: Object
     uniqueID: 1604257101
     locked: 0
-  - name: Player
+  - name: Character
     uniqueID: 4148031223
     locked: 0
   - name: Above Object
