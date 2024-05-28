@@ -4,8 +4,22 @@ using UnityEngine;
 
 public class OrderManager : MonoBehaviour
 {
-    private PlayerManager thePlayer;
+   private PlayerManager thePlayer;
     private List<MovingObject> characters;
+    static public OrderManager instance;
+
+    public void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +42,18 @@ public class OrderManager : MonoBehaviour
             tempList.Add(temp[i]);
         }
             return tempList;
+    }
+
+    public void NotMove()
+    {
+        thePlayer.notMove = true;
+
+    }
+
+    public void Move()
+    {
+        thePlayer.notMove = false;
+
     }
 
     public void SetThorough(string _name)
