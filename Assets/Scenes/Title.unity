@@ -321,7 +321,11 @@ SpriteRenderer:
   m_Size: {x: 20.11, y: 17.33}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< Updated upstream
   m_WasSpriteAssigned: 0
+=======
+  m_WasSpriteAssigned: 1
+>>>>>>> Stashed changes
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &82189187
@@ -533,7 +537,11 @@ SpriteRenderer:
   m_Size: {x: 18.49, y: 14.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< Updated upstream
   m_WasSpriteAssigned: 0
+=======
+  m_WasSpriteAssigned: 1
+>>>>>>> Stashed changes
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &310846801
@@ -632,7 +640,11 @@ SpriteRenderer:
   m_Size: {x: 23.88, y: 16.685682}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< Updated upstream
   m_WasSpriteAssigned: 0
+=======
+  m_WasSpriteAssigned: 1
+>>>>>>> Stashed changes
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &393347722
@@ -751,6 +763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb3fe8fdfa180c4cbe3f3613f0305e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   theFade: {fileID: 0}
   theAudio: {fileID: 0}
   click_sound: title_button
@@ -838,6 +851,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1181042926}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  click_sound: title_button
+>>>>>>> Stashed changes
 --- !u!1001 &1036735908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -943,6 +959,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ab5e6e01a3cf124db55566667be8118, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1181042924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,6 +1017,8 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1604252503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,6 +1151,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604252503}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &1795233957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,6 +1325,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1845698995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,7 +1408,11 @@ SpriteRenderer:
   m_Size: {x: 19.57, y: 12.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< Updated upstream
   m_WasSpriteAssigned: 0
+=======
+  m_WasSpriteAssigned: 1
+>>>>>>> Stashed changes
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2022665708
