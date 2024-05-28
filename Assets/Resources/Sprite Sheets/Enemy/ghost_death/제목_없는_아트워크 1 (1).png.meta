@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: a7e5b33d75a816f41ac69a00aeeb5b4e
+=======
+guid: 6ad0a00b314c9c04daed11e5af03bc6c
+>>>>>>> parent of dc7534a (Fixed title screen)
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
