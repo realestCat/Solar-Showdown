@@ -43,13 +43,13 @@ public class Title : MonoBehaviour
         //thePlayer.currentSceneName = "Jinyang";
         // theGM.LoadStart();
         SceneManager.LoadScene("Jinyang");
-        
+
 
     }
 
     public void QuitGame()
     {
-        //theAudio.Play(click_sound);
+        theAudio.Play(click_sound);
         UnityEngine.Application.Quit();
     }
 

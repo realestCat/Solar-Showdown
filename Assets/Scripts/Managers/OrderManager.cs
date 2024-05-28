@@ -6,20 +6,20 @@ public class OrderManager : MonoBehaviour
 {
    private PlayerManager thePlayer;
     private List<MovingObject> characters;
-    static public OrderManager instance;
+    //static public OrderManager instance;
 
-    public void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(this.gameObject);
-            instance = this;
-        }
-    }
+    //public void Awake()
+    //{
+    //    if (instance != null)
+    //    {
+    //        Destroy(this.gameObject);
+    //    }
+    //    else
+    //    {
+    //        DontDestroyOnLoad(this.gameObject);
+    //        instance = this;
+    //    }
+    //}
 
     // Start is called before the first frame update
     void Start()
