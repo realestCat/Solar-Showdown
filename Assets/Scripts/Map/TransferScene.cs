@@ -39,26 +39,10 @@ public class TransferScene : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            StartCoroutine(TransferCoroutine());
-      
+            thePlayer.currentMapName = transferMapName;
+            SceneManager.LoadScene(transferMapName);
+
         }
-    }
-
-    IEnumerator TransferCoroutine()
-    {
-        //theOrder.NotMove();
-        //theFade.FadeOut();
-       // yield return new WaitForSeconds(1f);
-        thePlayer.currentMapName = transferMapName;
-        //theOrder.Move();
-       // bars.SetActive(false);
-        SceneManager.LoadScene(transferMapName);
-        //theFade.FadeIn();
-        yield return new WaitForSeconds(0.5f);
-       // bars.SetActive(true);
-
-
-
     }
 }
 
