@@ -322,7 +322,15 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_WasSpriteAssigned: 1
+=======
+<<<<<<< Updated upstream
+  m_WasSpriteAssigned: 0
+=======
+  m_WasSpriteAssigned: 1
+>>>>>>> Stashed changes
+>>>>>>> parent of db5ff73 (Fixed title screen)
 =======
 <<<<<<< Updated upstream
   m_WasSpriteAssigned: 0
@@ -542,7 +550,15 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_WasSpriteAssigned: 1
+=======
+<<<<<<< Updated upstream
+  m_WasSpriteAssigned: 0
+=======
+  m_WasSpriteAssigned: 1
+>>>>>>> Stashed changes
+>>>>>>> parent of db5ff73 (Fixed title screen)
 =======
 <<<<<<< Updated upstream
   m_WasSpriteAssigned: 0
@@ -649,7 +665,15 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_WasSpriteAssigned: 1
+=======
+<<<<<<< Updated upstream
+  m_WasSpriteAssigned: 0
+=======
+  m_WasSpriteAssigned: 1
+>>>>>>> Stashed changes
+>>>>>>> parent of db5ff73 (Fixed title screen)
 =======
 <<<<<<< Updated upstream
   m_WasSpriteAssigned: 0
@@ -776,8 +800,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   click_sound: title_button
 =======
+=======
+>>>>>>> parent of db5ff73 (Fixed title screen)
 <<<<<<< Updated upstream
   theFade: {fileID: 0}
   theAudio: {fileID: 0}
@@ -869,6 +896,9 @@ Transform:
 =======
   click_sound: title_button
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+>>>>>>> parent of db5ff73 (Fixed title screen)
+=======
 >>>>>>> parent of db5ff73 (Fixed title screen)
 --- !u!1001 &1036735908
 PrefabInstance:
@@ -976,7 +1006,10 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ab5e6e01a3cf124db55566667be8118, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of db5ff73 (Fixed title screen)
 <<<<<<< Updated upstream
 --- !u!1 &1181042924
 GameObject:
@@ -1037,6 +1070,9 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 =======
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+>>>>>>> parent of db5ff73 (Fixed title screen)
+=======
 >>>>>>> parent of db5ff73 (Fixed title screen)
 --- !u!1 &1604252503
 GameObject:
@@ -1171,7 +1207,10 @@ CanvasRenderer:
   m_GameObject: {fileID: 1604252503}
   m_CullTransparentMesh: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of db5ff73 (Fixed title screen)
 <<<<<<< Updated upstream
 --- !u!1 &1795233957
 GameObject:
@@ -1348,6 +1387,9 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+>>>>>>> parent of db5ff73 (Fixed title screen)
+=======
 >>>>>>> parent of db5ff73 (Fixed title screen)
 --- !u!1 &1845698995
 GameObject:
@@ -1431,13 +1473,19 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_WasSpriteAssigned: 1
 =======
+=======
+>>>>>>> parent of db5ff73 (Fixed title screen)
 <<<<<<< Updated upstream
   m_WasSpriteAssigned: 0
 =======
   m_WasSpriteAssigned: 1
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+>>>>>>> parent of db5ff73 (Fixed title screen)
+=======
 >>>>>>> parent of db5ff73 (Fixed title screen)
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
