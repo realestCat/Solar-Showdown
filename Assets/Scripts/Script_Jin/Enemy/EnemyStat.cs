@@ -14,6 +14,11 @@ public class EnemyStat : MonoBehaviour
     public string deathSound;
     public GameObject effect;
 
+    // Ending Credit
+    public GameObject EC;
+    public GameObject Bars;
+
+
     public GameObject healthBarBackground;
     public Image healthBarFilled;
 
@@ -44,6 +49,9 @@ public class EnemyStat : MonoBehaviour
             AudioManager.instance.Play(deathSound);
             Destroy(this.gameObject);
             PlayerStat.instance.currentExp += exp;
+            EC.SetActive(true);
+            Bars.SetActive(false);
+
         }
 
         healthBarFilled.fillAmount = (float) currentHp/hp;

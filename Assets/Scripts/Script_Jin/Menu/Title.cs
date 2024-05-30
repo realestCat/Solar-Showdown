@@ -42,7 +42,7 @@ public class Title : MonoBehaviour
         //thePlayer.currentMapName = "Title";
         //thePlayer.currentSceneName = "Jinyang";
         // theGM.LoadStart();
-        SceneManager.LoadScene("First Scene");
+        SceneManager.LoadScene("Jinyang");
 
 
     }
