@@ -47,6 +47,7 @@ public class MonsterShoot : MonoBehaviour
 
     private void Shoot()
     {
+        print(_timeToFire);
         if (_timeToFire <= 0f)
         {
             RotateTowardsTarget();
@@ -64,7 +65,7 @@ public class MonsterShoot : MonoBehaviour
     
     void RotateTowardsTarget()
     {
-        Vector3 direction = target.position - transform.position;
+        Vector3 direction = target.position - firingPoint.position;
         direction.z = 0f;
 
         Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
