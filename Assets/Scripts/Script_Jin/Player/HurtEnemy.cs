@@ -18,10 +18,10 @@ public class HurtEnemy : MonoBehaviour
         thePlayerStat = FindObjectOfType<PlayerStat>();
     }
 
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             int dmg = collision.gameObject.GetComponent<EnemyStat>().Hit(thePlayerStat.atk);
             AudioManager.instance.Play(atkSound);
@@ -37,7 +37,6 @@ public class HurtEnemy : MonoBehaviour
             clone.GetComponent<FloatingText>().text.color = Color.white;
             clone.GetComponent<FloatingText>().text.fontSize = 10;
             clone.transform.SetParent(parent.transform);
-     
 
         }
     }
