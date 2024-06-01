@@ -12,10 +12,13 @@ public class TransferMap : MonoBehaviour
     public Transform target;
     public BoxCollider2D targetBound;
 
+    public GameObject hpSlider;
+
     private PlayerManager thePlayer;
     private CameraManager theCamera;
     private FadeManager theFade;
     private OrderManager theOrder;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +40,7 @@ public class TransferMap : MonoBehaviour
     IEnumerator TransferCoroutine() 
     {
         theOrder.NotMove();
+        hpSlider.SetActive(false);
         theFade.FadeOut();
         yield return new WaitForSeconds(1f);
         thePlayer.currentMapName = transferMapName;
@@ -45,6 +49,7 @@ public class TransferMap : MonoBehaviour
         thePlayer.transform.position = target.transform.position;
         theFade.FadeIn();
         yield return new WaitForSeconds(0.5f);
+        hpSlider.SetActive(true);
         theOrder.Move();
 
     }

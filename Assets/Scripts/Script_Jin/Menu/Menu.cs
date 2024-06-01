@@ -37,7 +37,7 @@ public class Menu : MonoBehaviour
 
     public void Continue()
     {
-       activated = false;
+        activated = false;
         go.SetActive(false);
         theOrder.Move();
         theAudio.Play(cancel_sound);

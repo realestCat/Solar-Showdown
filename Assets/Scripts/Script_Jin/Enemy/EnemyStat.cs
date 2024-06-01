@@ -6,11 +6,13 @@ using UnityEngine.UI;
 
 public class EnemyStat : MonoBehaviour
 {
+   // public static EnemyStat instance;
+
     public int hp;
     public int currentHp;
     public int atk;
     public int def;
-    public int exp;
+   // public int exp;
     public string deathSound;
     public GameObject effect;
 
@@ -25,6 +27,7 @@ public class EnemyStat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      //  instance = this;
         currentHp = hp;
         healthBarFilled.fillAmount = 1f;
     }
@@ -48,7 +51,7 @@ public class EnemyStat : MonoBehaviour
             Instantiate(effect, vector, Quaternion.Euler(Vector3.zero));
             AudioManager.instance.Play(deathSound);
             Destroy(this.gameObject);
-            PlayerStat.instance.currentExp += exp;
+            //PlayerStat.instance.currentExp += exp;
             EC.SetActive(true);
             Bars.SetActive(false);
 

@@ -20,6 +20,8 @@ public class MovingObject : MonoBehaviour
     public BoxCollider2D boxCollider;
     public LayerMask layerMask;
 
+
+
     public Queue<string> queue;
 
     private bool notCoroutine = false;
@@ -126,6 +128,7 @@ public class MovingObject : MonoBehaviour
         boxCollider.enabled = false;
         hit = Physics2D.Linecast(start, end, layerMask);
         boxCollider.enabled = true;
+
 
         if (hit.transform != null)
             return true;

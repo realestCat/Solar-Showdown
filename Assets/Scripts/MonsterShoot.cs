@@ -62,6 +62,7 @@ public class MonsterShoot : MonoBehaviour
             _timeToFire -= Time.deltaTime;
         }
     }
+
     
     void RotateTowardsTarget()
     {

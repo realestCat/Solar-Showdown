@@ -10,14 +10,14 @@ public class PlayerStat : MonoBehaviour
 {
     public static PlayerStat instance;
 
-    public int character_Lv;
-    public int[] needExp;
-    public int currentExp;
+    //public int character_Lv;
+    //public int[] needExp;
+    //public int currentExp;
 
     public int hp;
     public int currentHP;
-    public int mp;
-    public int currentMP;
+    //public int mp;
+    //public int currentMP;
 
     public int atk;
     public int def;
@@ -34,14 +34,14 @@ public class PlayerStat : MonoBehaviour
     public GameObject parent; // canvas
 
     public Slider hpSlider;
-    public Slider mpSlider;
+    //public Slider mpSlider;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         currentHP = hp;
-        currentMP = mp;
+        // currentMP = mp;
        // current_time = time;
     }
 
@@ -102,22 +102,23 @@ public class PlayerStat : MonoBehaviour
     void Update()
     {
         hpSlider.maxValue = hp;
-        mpSlider.maxValue = mp;
+       // mpSlider.maxValue = mp;
 
         hpSlider.value = currentHP;
-        mpSlider.value = currentMP;
+      //  mpSlider.value = currentMP;
 
-        if (currentExp >= needExp[character_Lv]) 
-        {
-            character_Lv++;
-            hp += character_Lv * 2;
-            mp += character_Lv + 3;
 
-            currentHP = hp;
-            currentMP = mp;
-            atk++;
-            def++;
-        }
+        //if (currentExp >= needExp[character_Lv]) 
+        //{
+        //    character_Lv++;
+        //    hp += character_Lv * 2;
+        //    mp += character_Lv + 3;
+
+        //    currentHP = hp;
+        //    currentMP = mp;
+        //    atk++;
+        //    def++;
+        //}
         //hpSlider.maxValue = hp;
         //mpSlider.maxValue = mp;
 
