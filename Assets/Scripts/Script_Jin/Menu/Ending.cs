@@ -6,19 +6,11 @@ public class Ending : MonoBehaviour
 {
     public GameObject go;
 
-    public OrderManager theOrder;
-
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        theOrder.NotMove();
-        go.SetActive(true);
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            go.SetActive(true);
+        }
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if(Input.GetKeyDown(KeyCode.Z))
-    //    {
-    //        go.SetActive(true);
-    //    }
-    //}
 }

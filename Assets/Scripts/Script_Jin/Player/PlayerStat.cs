@@ -5,18 +5,14 @@ using System.ComponentModel;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class PlayerStat : MonoBehaviour
 {
     public static PlayerStat instance;
-    public GameObject thePlayer;
 
     //public int character_Lv;
     //public int[] needExp;
     //public int currentExp;
-
-    public FadeManager theFade;
 
     public int hp;
     public int currentHP;
@@ -63,15 +59,7 @@ public class PlayerStat : MonoBehaviour
         currentHP -= dmg;
 
         if (currentHP <= 0)
-        { UnityEngine.Debug.Log("Game Over");
-
-            theFade.FadeOut();
-            //thePlayer.SetActive(false);
-            //StartCoroutine(WaitCoroutine());
-           // SceneManager.LoadScene("Title");
-
-
-        }
+        { UnityEngine.Debug.Log("Game Over"); }
 
         AudioManager.instance.Play(dmgSound);
 
@@ -87,12 +75,6 @@ public class PlayerStat : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(HitCoroutine());
     }
-
-    //IEnumerator WaitCoroutine()
-    //{
-    //    yield return new WaitForSeconds(3f);
-    //    SceneManager.LoadScene("Title");
-    //}
 
     IEnumerator HitCoroutine()
     {
