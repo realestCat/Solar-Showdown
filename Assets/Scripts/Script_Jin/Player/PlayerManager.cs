@@ -146,25 +146,25 @@ public class PlayerManager : MovingObject
             }
         }
 
-        if(!notMove && !attacking)
-        {
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                currentAttackDelay = attackDelay;
-                attacking = true;
-                animator.SetBool("Attacking", true);
-            }
-        }
+        //if(!notMove && !attacking)
+        //{
+        //    if(Input.GetKeyDown(KeyCode.Space))
+        //    {
+        //        currentAttackDelay = attackDelay;
+        //        attacking = true;
+        //        animator.SetBool("Attacking", true);
+        //    }
+        //}
 
-        if(attacking)
-        {
-            currentAttackDelay -= Time.deltaTime;
-            if(currentAttackDelay <= 0)
-            {
-                animator.SetBool("Attacking", false);
-                attacking = false;
-            }
-        }
+        //if(attacking)
+        //{
+        //    currentAttackDelay -= Time.deltaTime;
+        //    if(currentAttackDelay <= 0)
+        //    {
+        //        animator.SetBool("Attacking", false);
+        //        attacking = false;
+        //    }
+        //}
 
     }
 }

@@ -16,6 +16,13 @@ public class AttackEnemy : MonoBehaviour
 
     public float projectileSpeed = 200f;
 
+   // private Animator animator;
+
+    void Start()
+    {
+      //  animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -31,6 +38,29 @@ public class AttackEnemy : MonoBehaviour
             projectile.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+
+            //if (angle >= -45 && angle <= 45)
+            //{
+            //    animator.Play("Character_Attack_Right");
+            //    UnityEngine.Debug.Log("Right");
+            //}
+            //else if (angle > 45 && angle <= 135)
+            //{
+
+            //    animator.Play("Character_Attack_Up");
+            //    UnityEngine.Debug.Log("Up");
+            //}
+            //else if (angle > 135 && angle <= 225)
+            //{
+
+            //    animator.Play("Character_Attack_Left");
+            //    UnityEngine.Debug.Log("Left");
+            //}
+            //else
+            //{
+            //    animator.Play("Character_Attack_Down");
+            //    UnityEngine.Debug.Log("Down");
+            //}
 
             rb.velocity = direction * projectileSpeed;
 

@@ -20,7 +20,12 @@ public class Menu : MonoBehaviour
         }
     }
 
+    public BGMPlay theBGM;
+    BGMManager BGM;
+    AttackEnemy mouseAttack;
+
     public GameObject go;
+    public GameObject hpBar;
     public AudioManager theAudio;
 
     public string call_sound;
@@ -29,6 +34,14 @@ public class Menu : MonoBehaviour
     public OrderManager theOrder;
 
     private bool activated;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        theBGM = FindObjectOfType<BGMPlay>();
+        BGM = FindObjectOfType<BGMManager>();
+        mouseAttack = FindObjectOfType<AttackEnemy>();
+    }
 
     public void Exit()
     {
@@ -39,10 +52,28 @@ public class Menu : MonoBehaviour
     {
         activated = false;
         go.SetActive(false);
+        hpBar.SetActive(true);
         theOrder.Move();
         theAudio.Play(cancel_sound);
     }
 
+    public void MusicPlay1()
+    {
+        
+        theAudio.Play(cancel_sound);
+        theBGM.playMusucTrack = 0;
+        BGM.Play(theBGM.playMusucTrack);
+
+    }
+
+    public void MusicPlay2()
+    {
+
+        theAudio.Play(cancel_sound);
+        theBGM.playMusucTrack = 1;
+        BGM.Play(theBGM.playMusucTrack);
+
+    }
 
 
     // Update is called once per frame
@@ -50,7 +81,9 @@ public class Menu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            mouseAttack.enabled = false;
             activated = !activated;
+            hpBar.SetActive(false);
 
             if (activated)
             {
@@ -62,6 +95,8 @@ public class Menu : MonoBehaviour
             {
                 go.SetActive(false);
                 theAudio.Play(cancel_sound);
+                mouseAttack.enabled = true;
+                hpBar.SetActive(true);
                 theOrder.Move();
             }
         }

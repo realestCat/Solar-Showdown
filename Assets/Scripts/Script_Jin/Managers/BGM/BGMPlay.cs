@@ -11,6 +11,7 @@ public class BGMPlay : MonoBehaviour
     void Start()
     {
         BGM = FindObjectOfType<BGMManager>();
+        //BGM.Play(playMusucTrack);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
