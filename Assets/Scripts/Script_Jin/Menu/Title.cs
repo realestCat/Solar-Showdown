@@ -51,7 +51,7 @@ public class Title : MonoBehaviour
         //thePlayer.currentSceneName = "Jinyang";
         // theGM.LoadStart();
         
-        SceneManager.LoadScene("Jinyang");
+        SceneManager.LoadScene("Main");
 
 
     }
