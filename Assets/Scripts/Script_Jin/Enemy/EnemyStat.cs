@@ -16,9 +16,9 @@ public class EnemyStat : MonoBehaviour
     public string deathSound;
     public GameObject effect;
 
-    // Ending Credit
+    //// Ending Credit
     public GameObject EC;
-    public GameObject Bars;
+    //public GameObject Bars;
 
 
     public GameObject healthBarBackground;
@@ -52,8 +52,8 @@ public class EnemyStat : MonoBehaviour
             AudioManager.instance.Play(deathSound);
             Destroy(this.gameObject);
             //PlayerStat.instance.currentExp += exp;
-            EC.SetActive(true);
-            Bars.SetActive(false);
+            //EC.SetActive(true);
+            //Bars.SetActive(false);
 
         }
 
@@ -64,6 +64,14 @@ public class EnemyStat : MonoBehaviour
         StartCoroutine(WaitCoroutine());
 
         return dmg;
+    }
+
+    public void Credit()
+    {
+        if (currentHp <= 0)
+        {
+            EC.SetActive(true);
+        }
     }
 
     IEnumerator WaitCoroutine()
