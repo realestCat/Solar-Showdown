@@ -8,7 +8,6 @@ public class PlayerAttack : MonoBehaviour
     //public GameObject parent;
     public GameObject effect;
     public int atk;
-    //public GameObject credit;
     // public string atkSound;
 
     private EnemyStat theEnemyStat;
@@ -24,18 +23,13 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "King Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
 
             EnemyStat enemyStat = collision.gameObject.GetComponent<EnemyStat>();
             if (enemyStat != null)
             {
                 enemyStat.Hit(atk);
-            }
-
-            if (collision.gameObject.tag == "King Enemy")
-            {
-                enemyStat.Credit();
             }
 
             //AudioManager.instance.Play(atkSound);
