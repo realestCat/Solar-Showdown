@@ -19,14 +19,19 @@ public class PlayerAttack : MonoBehaviour
         int projectileLayer = gameObject.layer;
         int noPassingLayer = LayerMask.NameToLayer("No Passing");
         //Physics2D.IgnoreLayerCollision(projectileLayer, noPassingLayer, true);
-        theEnemyStat = FindObjectOfType<EnemyStat>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            theEnemyStat.Hit(atk);
+
+            EnemyStat enemyStat = collision.gameObject.GetComponent<EnemyStat>();
+            if (enemyStat != null)
+            {
+                enemyStat.Hit(atk);
+            }
+
             //AudioManager.instance.Play(atkSound);
 
             Vector3 vector = collision.transform.position;
@@ -45,7 +50,6 @@ public class PlayerAttack : MonoBehaviour
 
         if (collision.gameObject.tag == "Wall")
         {
-
             Destroy(this.gameObject);
         }
 
