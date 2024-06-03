@@ -87,18 +87,18 @@ public class GhostController : MovingObject
     {
         PlayerPos = thePlayer.transform.position;
 
-        if(Mathf.Abs(Mathf.Abs(PlayerPos.x) - Mathf.Abs(this.transform.position.x)) <= speed +  walkCount * 2.5f) 
+        if(Mathf.Abs(Mathf.Abs(PlayerPos.x) - Mathf.Abs(this.transform.position.x)) <= speed +  walkCount * 3.7f) 
         {
-            if (Mathf.Abs(Mathf.Abs(PlayerPos.y) - Mathf.Abs(this.transform.position.y)) <= speed + walkCount * 1f)
+            if (Mathf.Abs(Mathf.Abs(PlayerPos.y) - Mathf.Abs(this.transform.position.y)) <= speed + walkCount * 2.5f)
             {
                 return true;
             }
 
         }
 
-        if (Mathf.Abs(Mathf.Abs(PlayerPos.y) - Mathf.Abs(this.transform.position.y)) <= speed + walkCount * 2.5f)
+        if (Mathf.Abs(Mathf.Abs(PlayerPos.y) - Mathf.Abs(this.transform.position.y)) <= speed + walkCount * 3.7f)
         {
-            if (Mathf.Abs(Mathf.Abs(PlayerPos.x) - Mathf.Abs(this.transform.position.x)) <= speed + walkCount * 1f)
+            if (Mathf.Abs(Mathf.Abs(PlayerPos.x) - Mathf.Abs(this.transform.position.x)) <= speed + walkCount * 2.5f)
             {
                 return true;
             }

@@ -4,6 +4,7 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class EnemyStat : MonoBehaviour
 {
    // public static EnemyStat instance;
@@ -15,11 +16,7 @@ public class EnemyStat : MonoBehaviour
    // public int exp;
     public string deathSound;
     public GameObject effect;
-
-
-    //// Ending Credit
-    public GameObject EC;
-    //public GameObject Bars;
+    public GameObject E_Credit;
 
     private PlayerStat thePlayer;
 
@@ -35,6 +32,7 @@ public class EnemyStat : MonoBehaviour
         healthBarFilled.fillAmount = 1f;
         thePlayer = FindObjectOfType<PlayerStat>();
         theAudio = FindObjectOfType<AudioManager>();
+       
 
     }
 
@@ -75,7 +73,17 @@ public class EnemyStat : MonoBehaviour
     {
         if (currentHp <= 0)
         {
-            EC.SetActive(true);
+            //basicBGM.SetActive(false);
+            //theOrder.NotMove();
+            //BGM.Stop();
+            //theBGM.playMusucTrack = 2;
+            //BGM.Play(theBGM.playMusucTrack);
+
+            //EC.SetActive(true);
+
+            //StartCoroutine(WaitCoroutine2());
+
+            E_Credit.SetActive(true);
         }
     }
 
@@ -84,4 +92,6 @@ public class EnemyStat : MonoBehaviour
         yield return new WaitForSeconds(3f);
         healthBarBackground.SetActive(false);
     }
+
+    
 }

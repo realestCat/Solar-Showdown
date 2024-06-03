@@ -9,40 +9,28 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStat : MonoBehaviour
 {
-    public GameObject player;
+   // public GameObject player;
     public static PlayerStat instance;
-    public GameObject thePlayer;
+   // public GameObject thePlayer;
 
     public int killCount = 0;
-
-    //public int character_Lv;
-    //public int[] needExp;
-    //public int currentExp;
-
     
     public GameObject GameOver;
 
     public int hp;
     public int currentHP;
-    //public int mp;
-    //public int currentMP;
 
     public int atk;
     public int def;
 
-    //public int recover_hp;
-    //public int recover_mp;
-
      public string dmgSound;
 
-    //public float time;
-    //private float current_time;
 
     public GameObject prefabs_Floating_text;
     public GameObject parent; // canvas
 
     public Slider hpSlider;
-    //public Slider mpSlider;
+
 
     private AudioManager theAudio;
 
@@ -51,8 +39,6 @@ public class PlayerStat : MonoBehaviour
     {
         instance = this;
         currentHP = hp;
-        // currentMP = mp;
-        // current_time = time;
         theAudio = FindObjectOfType<AudioManager>();
 
     }
@@ -71,8 +57,8 @@ public class PlayerStat : MonoBehaviour
         currentHP -= dmg;
 
         if (currentHP <= 0)
-        { // UnityEngine.Debug.Log("Game Over");
-
+        { 
+            // UnityEngine.Debug.Log("Game Over");
             GameOver.SetActive(true);
         }
 
@@ -118,29 +104,6 @@ public class PlayerStat : MonoBehaviour
     void Update()
     {
         hpSlider.maxValue = hp;
-       // mpSlider.maxValue = mp;
-
         hpSlider.value = currentHP;
-      //  mpSlider.value = currentMP;
-
-
-        //if (currentExp >= needExp[character_Lv]) 
-        //{
-        //    character_Lv++;
-        //    hp += character_Lv * 2;
-        //    mp += character_Lv + 3;
-
-        //    currentHP = hp;
-        //    currentMP = mp;
-        //    atk++;
-        //    def++;
-        //}
-        //hpSlider.maxValue = hp;
-        //mpSlider.maxValue = mp;
-
-        //hpSlider.value = currentHP;
-        //mpSlider.value = currentMP;
-
-
     }
 }

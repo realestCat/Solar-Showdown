@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class TransferMap : MonoBehaviour
 {
     public string transferMapName;
+    public string Sound;
 
     public Transform target;
     public BoxCollider2D targetBound;
@@ -18,6 +19,7 @@ public class TransferMap : MonoBehaviour
     private CameraManager theCamera;
     private FadeManager theFade;
     private OrderManager theOrder;
+    private AudioManager theAudio;
 
 
     // Start is called before the first frame update
@@ -27,6 +29,7 @@ public class TransferMap : MonoBehaviour
         thePlayer = FindObjectOfType<PlayerManager>();
         theFade = FindObjectOfType<FadeManager>();
         theOrder = FindObjectOfType<OrderManager>();
+        theAudio = FindObjectOfType<AudioManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,6 +42,7 @@ public class TransferMap : MonoBehaviour
 
     IEnumerator TransferCoroutine() 
     {
+        theAudio.Play(Sound);
         theOrder.NotMove();
         hpSlider.SetActive(false);
         theFade.FadeOut();

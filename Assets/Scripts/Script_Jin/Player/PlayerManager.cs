@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class PlayerManager : MovingObject
 {
-    //static public PlayerManager instance;
 
     public string currentMapName;
-    //public string currentSceneName;
 
     public string walkSound_1;
     public string walkSound_2;
@@ -29,25 +27,11 @@ public class PlayerManager : MovingObject
     public float attackDelay;
     private float currentAttackDelay;
 
-    //public void Awake()
-    //{
-    //    if (instance != null)
-    //    {
-    //        Destroy(this.gameObject);
-    //    }
-    //    else
-    //    {
-    //        DontDestroyOnLoad(this.gameObject);
-    //        instance = this;
-    //    }
-    //}
-
     // Start is called before the first frame update
     void Start()
     {
             queue = new Queue<string>();
             boxCollider = GetComponent<BoxCollider2D>();
-            //audioSource = GetComponent<AudioSource>();
             animator = GetComponent<Animator>();
             theAudio = FindObjectOfType<AudioManager>();
     }
@@ -99,10 +83,6 @@ public class PlayerManager : MovingObject
                     theAudio.Play(walkSound_4);
                     break;
             }
-            //         //theAudio.setVolume(walkSound_2, 0.5f);
-            //         //theAudio.stop(walkSound_2);
-            //         //theAudio.SetLoop(walkSound_2);
-
            
 
             boxCollider.offset = new Vector2(vector.x * 0.3f * speed * walkCount, vector.y * 0.3f * speed * walkCount);
@@ -145,26 +125,6 @@ public class PlayerManager : MovingObject
                 StartCoroutine(MoveCoroutine());
             }
         }
-
-        //if(!notMove && !attacking)
-        //{
-        //    if(Input.GetKeyDown(KeyCode.Space))
-        //    {
-        //        currentAttackDelay = attackDelay;
-        //        attacking = true;
-        //        animator.SetBool("Attacking", true);
-        //    }
-        //}
-
-        //if(attacking)
-        //{
-        //    currentAttackDelay -= Time.deltaTime;
-        //    if(currentAttackDelay <= 0)
-        //    {
-        //        animator.SetBool("Attacking", false);
-        //        attacking = false;
-        //    }
-        //}
 
     }
 }
