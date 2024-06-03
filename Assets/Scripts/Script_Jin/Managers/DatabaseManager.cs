@@ -39,17 +39,17 @@ public class DatabaseManager : MonoBehaviour
         vector.y += 17;
 
 
-        GameObject clone = Instantiate(prefabs_Floating_Text, vector, Quaternion.Euler(Vector3.zero));
-        clone.GetComponent<FloatingText>().text.text = number.ToString();
+        //GameObject clone = Instantiate(prefabs_Floating_Text, vector, Quaternion.Euler(Vector3.zero));
+        //clone.GetComponent<FloatingText>().text.text = number.ToString();
 
-        if(color == "GREEN")
-        clone.GetComponent<FloatingText>().text.color = Color.green;
-        else if (color == "RED")
-            clone.GetComponent<FloatingText>().text.color = Color.red;
+        //if(color == "GREEN")
+        //clone.GetComponent<FloatingText>().text.color = Color.green;
+        //else if (color == "RED")
+        //    clone.GetComponent<FloatingText>().text.color = Color.red;
 
 
-        clone.GetComponent<FloatingText>().text.fontSize = 10;
-        clone.transform.SetParent(parent.transform);
+        //clone.GetComponent<FloatingText>().text.fontSize = 10;
+        //clone.transform.SetParent(parent.transform);
     }
 
     public void UseItem(int _itemID)
@@ -61,7 +61,7 @@ public class DatabaseManager : MonoBehaviour
                 thePlayerStat.currentHP += 5;
                 else
                     thePlayerStat.currentHP = thePlayerStat.hp;
-                FloatingText(5, "GREEN");
+                //FloatingText(5, "GREEN");
                 break;
 
             case 10002:
@@ -69,7 +69,7 @@ public class DatabaseManager : MonoBehaviour
                     thePlayerStat.currentHP += 8;
                 else
                     thePlayerStat.currentHP = thePlayerStat.hp;
-                FloatingText(8, "GREEN");
+               // FloatingText(8, "GREEN");
                 break;
 
             case 10003:
@@ -77,7 +77,7 @@ public class DatabaseManager : MonoBehaviour
                     thePlayerStat.currentHP += 11;
                 else
                     thePlayerStat.currentHP = thePlayerStat.hp;
-                FloatingText(11, "GREEN");
+               // FloatingText(11, "GREEN");
                 break;
         }
     }

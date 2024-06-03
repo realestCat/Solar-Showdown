@@ -64,17 +64,17 @@ public class PlayerStat : MonoBehaviour
 
             theAudio.Play(dmgSound);
 
-        Vector3 vector = this.transform.position;
-        vector.y += 17;
+        //Vector3 vector = this.transform.position;
+        //vector.y += 17;
 
 
-        GameObject clone = Instantiate(prefabs_Floating_text, vector, Quaternion.Euler(Vector3.zero));
-        clone.GetComponent<FloatingText>().text.text = dmg.ToString();
-        clone.GetComponent<FloatingText>().text.color = Color.blue;
-        clone.GetComponent<FloatingText>().text.fontSize = 10;
-        clone.transform.SetParent(parent.transform);
-        StopAllCoroutines();
-        StartCoroutine(HitCoroutine());
+        //GameObject clone = Instantiate(prefabs_Floating_text, vector, Quaternion.Euler(Vector3.zero));
+        //clone.GetComponent<FloatingText>().text.text = dmg.ToString();
+        //clone.GetComponent<FloatingText>().text.color = Color.blue;
+        //clone.GetComponent<FloatingText>().text.fontSize = 10;
+        //clone.transform.SetParent(parent.transform);
+        //StopAllCoroutines();
+        //StartCoroutine(HitCoroutine());
     }
 
 
