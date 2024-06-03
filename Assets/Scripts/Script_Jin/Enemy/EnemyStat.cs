@@ -73,15 +73,6 @@ public class EnemyStat : MonoBehaviour
     {
         if (currentHp <= 0)
         {
-            //basicBGM.SetActive(false);
-            //theOrder.NotMove();
-            //BGM.Stop();
-            //theBGM.playMusucTrack = 2;
-            //BGM.Play(theBGM.playMusucTrack);
-
-            //EC.SetActive(true);
-
-            //StartCoroutine(WaitCoroutine2());
 
             E_Credit.SetActive(true);
         }
