@@ -9,7 +9,7 @@ public class MonsterShoot : MonoBehaviour
     
     public Transform target;
 
-    public float distanceToShoot = 5f;
+    public float distanceToShoot = 8f;
     public Transform firingPoint;
 
     public float projectileSpeed = 10f;

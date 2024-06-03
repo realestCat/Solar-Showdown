@@ -57,15 +57,28 @@ public class DatabaseManager : MonoBehaviour
         switch( _itemID) 
         {
             case 10001:
-                if(thePlayerStat.hp >= thePlayerStat.currentHP + 30)
-                thePlayerStat.currentHP += 30;
+                if(thePlayerStat.hp >= thePlayerStat.currentHP + 5)
+                thePlayerStat.currentHP += 5;
                 else
                     thePlayerStat.currentHP = thePlayerStat.hp;
-                FloatingText(30, "GREEN");
+                FloatingText(5, "GREEN");
                 break;
-            
-                //case 10002:
-            //    Debug.Log("+50 mp");
+
+            case 10002:
+                if (thePlayerStat.hp >= thePlayerStat.currentHP + 8)
+                    thePlayerStat.currentHP += 8;
+                else
+                    thePlayerStat.currentHP = thePlayerStat.hp;
+                FloatingText(8, "GREEN");
+                break;
+
+            case 10003:
+                if (thePlayerStat.hp >= thePlayerStat.currentHP + 11)
+                    thePlayerStat.currentHP += 11;
+                else
+                    thePlayerStat.currentHP = thePlayerStat.hp;
+                FloatingText(11, "GREEN");
+                break;
         }
     }
 
@@ -73,6 +86,8 @@ public class DatabaseManager : MonoBehaviour
     void Start()
     {
         thePlayerStat = FindObjectOfType<PlayerStat>();
-        itemList.Add(new Item(10001, "Red Potion", "+30 hp", Item.ItemType.Use));
+        itemList.Add(new Item(10001, "Red Potion", "+5 hp", Item.ItemType.Use));
+        itemList.Add(new Item(10002, "Red Potion", "+8 hp", Item.ItemType.Use));
+        itemList.Add(new Item(10003, "Red Potion", "+11 hp", Item.ItemType.Use));
     }
 }

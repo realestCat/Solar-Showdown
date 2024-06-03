@@ -7,6 +7,8 @@ public class Menu : MonoBehaviour
 {
     public static Menu instance;
 
+    public GameObject basicBGM;
+
     public void Awake()
     {
         if (instance != null)
@@ -59,7 +61,7 @@ public class Menu : MonoBehaviour
 
     public void MusicPlay1()
     {
-        
+        basicBGM.SetActive(false);
         theAudio.Play(cancel_sound);
         theBGM.playMusucTrack = 0;
         BGM.Play(theBGM.playMusucTrack);
@@ -68,7 +70,7 @@ public class Menu : MonoBehaviour
 
     public void MusicPlay2()
     {
-
+        basicBGM.SetActive(false);
         theAudio.Play(cancel_sound);
         theBGM.playMusucTrack = 1;
         BGM.Play(theBGM.playMusucTrack);
