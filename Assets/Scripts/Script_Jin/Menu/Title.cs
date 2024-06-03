@@ -7,12 +7,12 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class Title : MonoBehaviour
 {
-    public AudioSource theAudio;
+    //public AudioSource theAudio;
     public GameObject start;
     public GameObject quit;
 
     private FadeManager theFade;
-   // private AudioManager theAudio;
+    private AudioManager theAudio;
 
     public string click_sound;
 
@@ -24,10 +24,10 @@ public class Title : MonoBehaviour
     void Start()
     {
          theFade = FindObjectOfType<FadeManager>();
-        //theAudio = FindObjectOfType<AudioManager>();
+        theAudio = FindObjectOfType<AudioManager>();
         // thePlayer = FindObjectOfType<PlayerManager>();
         // theGM = FindObjectOfType<GameManager>();
-        theAudio = GetComponent<AudioSource>();
+        //theAudio = GetComponent<AudioSource>();
 
     }
 
@@ -39,8 +39,8 @@ public class Title : MonoBehaviour
     IEnumerator GameStartCoroutine()
     {
         theFade.FadeOut();
-        //theAudio.Play(click_sound);
-        theAudio.Play();
+        theAudio.Play(click_sound);
+        //theAudio.Play();
         start.SetActive(false);
         quit.SetActive(false);
         yield return new WaitForSeconds(2f);
@@ -58,8 +58,8 @@ public class Title : MonoBehaviour
 
     public void QuitGame()
     {
-        // theAudio.Play(click_sound);
-        theAudio.Play();
+         theAudio.Play(click_sound);
+       // theAudio.Play();
         UnityEngine.Application.Quit();
     }
 

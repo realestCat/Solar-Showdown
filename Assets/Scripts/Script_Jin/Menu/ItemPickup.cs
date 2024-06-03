@@ -16,7 +16,7 @@ public class ItemPickup : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(Input.GetKeyDown(KeyCode.Z))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             theAudio.Play(pickUpSound);
             theDatabase.UseItem(itemID);

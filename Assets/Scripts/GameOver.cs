@@ -19,7 +19,7 @@ public class GameOver : MonoBehaviour
         {
             thePlayer.SetActive(false);
             theFade.FadeOut();
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3f);
             SceneManager.LoadScene("Title");
         }
    
