@@ -16,13 +16,16 @@ public class EnemyStat : MonoBehaviour
     public string deathSound;
     public GameObject effect;
 
+
     //// Ending Credit
     public GameObject EC;
     //public GameObject Bars;
 
+    private PlayerStat thePlayer;
 
     public GameObject healthBarBackground;
     public Image healthBarFilled;
+    private AudioManager theAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,9 @@ public class EnemyStat : MonoBehaviour
       //  instance = this;
         currentHp = hp;
         healthBarFilled.fillAmount = 1f;
+        thePlayer = FindObjectOfType<PlayerStat>();
+        theAudio = FindObjectOfType<AudioManager>();
+
     }
 
     public int Hit(int _playerAtk)
@@ -48,12 +54,14 @@ public class EnemyStat : MonoBehaviour
 
         if (currentHp <= 0)
         {
+            thePlayer.killCount++;
             Instantiate(effect, vector, Quaternion.Euler(Vector3.zero));
-            AudioManager.instance.Play(deathSound);
+            theAudio.Play(deathSound);
             Destroy(this.gameObject);
             //PlayerStat.instance.currentExp += exp;
-            //EC.SetActive(true);
-            //Bars.SetActive(false);
+
+
+
 
         }
 

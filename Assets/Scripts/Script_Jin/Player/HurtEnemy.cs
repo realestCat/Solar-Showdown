@@ -11,11 +11,14 @@ public class HurtEnemy : MonoBehaviour
     public string atkSound;
 
     private PlayerStat thePlayerStat;
+    private AudioManager theAudio;
+
 
     // Start is called before the first frame update
     void Start()
     {
         thePlayerStat = FindObjectOfType<PlayerStat>();
+        theAudio = FindObjectOfType<AudioManager>();
     }
 
 
@@ -24,7 +27,7 @@ public class HurtEnemy : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             int dmg = collision.gameObject.GetComponent<EnemyStat>().Hit(thePlayerStat.atk);
-            AudioManager.instance.Play(atkSound);
+            theAudio.Play(atkSound);
 
             Vector3 vector = collision.transform.position;
 

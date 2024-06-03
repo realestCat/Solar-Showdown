@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class EndingCreditMon : MonoBehaviour
 {
     public static EndingCreditMon instance;
+    private AudioManager theAudio;
 
     public int hp;
     public int currentHp;
@@ -30,6 +31,7 @@ public class EndingCreditMon : MonoBehaviour
         instance = this;
         currentHp = hp;
         healthBarFilled.fillAmount = 1f;
+        theAudio = FindObjectOfType<AudioManager>();
     }
 
     public int Hit(int _playerAtk)
@@ -49,7 +51,7 @@ public class EndingCreditMon : MonoBehaviour
         if (currentHp <= 0)
         {
             Instantiate(effect, vector, Quaternion.Euler(Vector3.zero));
-            AudioManager.instance.Play(deathSound);
+            theAudio.Play(deathSound);
             Destroy(this.gameObject);
            // PlayerStat.instance.currentExp += exp;
             EC.SetActive(true);

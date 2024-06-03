@@ -5,22 +5,22 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-    public static Menu instance;
+    //public static Menu instance;
 
     public GameObject basicBGM;
 
-    public void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(this.gameObject);
-            instance = this;
-        }
-    }
+    //public void Awake()
+    //{
+    //    if (instance != null)
+    //    {
+    //        Destroy(this.gameObject);
+    //    }
+    //    else
+    //    {
+    //        DontDestroyOnLoad(this.gameObject);
+    //        instance = this;
+    //    }
+    //}
 
     public BGMPlay theBGM;
     BGMManager BGM;

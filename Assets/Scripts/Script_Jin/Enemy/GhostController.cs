@@ -10,6 +10,7 @@ public class GhostController : MovingObject
 {
     public float attackDelay;
 
+
     public float inter_MoveWaitTime;
     private float current_interMWT;
 
@@ -20,6 +21,8 @@ public class GhostController : MovingObject
     private int random_int;
     private string direction;
     public GameObject healthBar;
+    private PlayerManager thePlayer;
+
 
 
     // Start is called before the first frame update
@@ -27,6 +30,7 @@ public class GhostController : MovingObject
     {
         queue = new Queue<string>();
         current_interMWT = inter_MoveWaitTime;
+        thePlayer = FindObjectOfType<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -81,7 +85,7 @@ public class GhostController : MovingObject
 
     private bool NearPlayer()
     {
-        PlayerPos = PlayerManager.instance.transform.position;
+        PlayerPos = thePlayer.transform.position;
 
         if(Mathf.Abs(Mathf.Abs(PlayerPos.x) - Mathf.Abs(this.transform.position.x)) <= speed +  walkCount * 2.5f) 
         {

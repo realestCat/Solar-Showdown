@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerManager : MovingObject
 {
-    static public PlayerManager instance;
+    //static public PlayerManager instance;
 
     public string currentMapName;
     //public string currentSceneName;
@@ -29,18 +29,18 @@ public class PlayerManager : MovingObject
     public float attackDelay;
     private float currentAttackDelay;
 
-    public void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(this.gameObject);
-            instance = this;
-        }
-    }
+    //public void Awake()
+    //{
+    //    if (instance != null)
+    //    {
+    //        Destroy(this.gameObject);
+    //    }
+    //    else
+    //    {
+    //        DontDestroyOnLoad(this.gameObject);
+    //        instance = this;
+    //    }
+    //}
 
     // Start is called before the first frame update
     void Start()

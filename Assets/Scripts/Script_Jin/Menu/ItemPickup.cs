@@ -10,11 +10,15 @@ public class ItemPickup : MonoBehaviour
     public int itemID;
     public string pickUpSound;
 
+    private AudioManager theAudio;
+
+    
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(Input.GetKeyDown(KeyCode.Z))
         {
-            AudioManager.instance.Play(pickUpSound);
+            theAudio.Play(pickUpSound);
             theDatabase.UseItem(itemID);
             Destroy(this.gameObject);
 
@@ -25,6 +29,7 @@ public class ItemPickup : MonoBehaviour
     void Start()
     {
         theDatabase = FindObjectOfType<DatabaseManager>();
+        theAudio = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame

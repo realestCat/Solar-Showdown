@@ -9,14 +9,18 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStat : MonoBehaviour
 {
+    public GameObject player;
     public static PlayerStat instance;
     public GameObject thePlayer;
+
+    public int killCount = 0;
 
     //public int character_Lv;
     //public int[] needExp;
     //public int currentExp;
 
-    public FadeManager theFade;
+    
+    public GameObject GameOver;
 
     public int hp;
     public int currentHP;
@@ -40,13 +44,17 @@ public class PlayerStat : MonoBehaviour
     public Slider hpSlider;
     //public Slider mpSlider;
 
+    private AudioManager theAudio;
+
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         currentHP = hp;
         // currentMP = mp;
-       // current_time = time;
+        // current_time = time;
+        theAudio = FindObjectOfType<AudioManager>();
+
     }
 
     
@@ -63,17 +71,12 @@ public class PlayerStat : MonoBehaviour
         currentHP -= dmg;
 
         if (currentHP <= 0)
-        { UnityEngine.Debug.Log("Game Over");
+        { // UnityEngine.Debug.Log("Game Over");
 
-            theFade.FadeOut();
-            //thePlayer.SetActive(false);
-            //StartCoroutine(WaitCoroutine());
-           // SceneManager.LoadScene("Title");
-
-
+            GameOver.SetActive(true);
         }
 
-        AudioManager.instance.Play(dmgSound);
+            theAudio.Play(dmgSound);
 
         Vector3 vector = this.transform.position;
         vector.y += 17;
@@ -88,11 +91,6 @@ public class PlayerStat : MonoBehaviour
         StartCoroutine(HitCoroutine());
     }
 
-    //IEnumerator WaitCoroutine()
-    //{
-    //    yield return new WaitForSeconds(3f);
-    //    SceneManager.LoadScene("Title");
-    //}
 
     IEnumerator HitCoroutine()
     {

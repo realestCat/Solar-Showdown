@@ -16,11 +16,14 @@ public class AttackEnemy : MonoBehaviour
 
     public float projectileSpeed = 200f;
 
-   // private Animator animator;
+    // private Animator animator;
+    private AudioManager theAudio;
 
+   
     void Start()
     {
-      //  animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        //  animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        theAudio = FindObjectOfType<AudioManager>();
     }
 
     void Update()
@@ -64,7 +67,7 @@ public class AttackEnemy : MonoBehaviour
 
             rb.velocity = direction * projectileSpeed;
 
-            AudioManager.instance.Play(atkSound1);
+            theAudio.Play(atkSound1);
         }
        else if (Input.GetMouseButtonDown(1) && Fire)
         {
@@ -83,7 +86,7 @@ public class AttackEnemy : MonoBehaviour
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             rb.velocity = direction * projectileSpeed;
 
-            AudioManager.instance.Play(atkSound2);
+           theAudio.Play(atkSound2);
 
             Fire_CoolDown.SetActive(true);
 

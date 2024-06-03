@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    static CameraManager instance;
+    //static CameraManager instance;
     public GameObject target;
 
     public float moveSpeed;
@@ -21,18 +21,18 @@ public class CameraManager : MonoBehaviour
 
     private Camera theCamera;
 
-    public void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(this.gameObject);
-            instance = this;
-        }
-    }
+    //public void Awake()
+    //{
+    //    if (instance != null)
+    //    {
+    //        Destroy(this.gameObject);
+    //    }
+    //    else
+    //    {
+    //        DontDestroyOnLoad(this.gameObject);
+    //        instance = this;
+    //    }
+    //}
 
     // Start is called before the first frame update
     void Start()
