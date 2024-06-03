@@ -26,19 +26,19 @@ public class MonsterCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (thePlayer.killCount == 4)
+        if (thePlayer.killCount == 1)
         {
             MapTransfer1.SetActive(true);
            // theCamera.SetBound(Bound1);
         }
             
-        if (thePlayer.killCount == 12)
+        if (thePlayer.killCount == 2)
         {
             MapTransfer2.SetActive(true);
             //theCamera.SetBound(Bound2);
         }
 
-        if (thePlayer.killCount == 20)
+        if (thePlayer.killCount == 3)
         {
             MapTransfer3.SetActive(true);
             //theCamera.SetBound(Bound2);

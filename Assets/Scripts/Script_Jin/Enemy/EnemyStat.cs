@@ -60,9 +60,6 @@ public class EnemyStat : MonoBehaviour
             Destroy(this.gameObject);
             //PlayerStat.instance.currentExp += exp;
 
-
-
-
         }
 
         healthBarFilled.fillAmount = (float) currentHp/hp;
