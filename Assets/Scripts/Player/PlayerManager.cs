@@ -14,6 +14,8 @@ public class PlayerManager : MovingObject
     public string walkSound_4;
 
     private AudioManager theAudio;
+    private AttackEnemy theAttack;
+    //private Animator animator;
 
     public float runSpeed;
     private float applyRunSpeed;
@@ -32,8 +34,9 @@ public class PlayerManager : MovingObject
     {
             queue = new Queue<string>();
             boxCollider = GetComponent<BoxCollider2D>();
-            animator = GetComponent<Animator>();
+           // animator = GetComponent<Animator>();
             theAudio = FindObjectOfType<AudioManager>();
+            theAttack = FindObjectOfType<AttackEnemy>();
     }
 
     IEnumerator MoveCoroutine()
@@ -51,6 +54,11 @@ public class PlayerManager : MovingObject
                 applyRunSpeed = 0;
 
             }
+
+            //if(theAttack.isShooting == true)
+            //{
+            //    StartCoroutine(PlayShootingAnimation());
+            //}
 
             vector.Set(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), transform.position.z);
 
@@ -113,6 +121,35 @@ public class PlayerManager : MovingObject
         canMove = true;
 
     }
+
+    //IEnumerator PlayShootingAnimation()
+    //{
+    //    if (theAttack.angle >= -45 && theAttack.angle <= 45)
+    //    {
+    //        animator.Play("Character_Shooting_Right");
+    //        UnityEngine.Debug.Log("Right");
+    //    }
+    //    else if (theAttack.angle > 45 && theAttack.angle <= 135)
+    //    {
+
+    //        animator.Play("Character_Shooting_Up");
+    //        UnityEngine.Debug.Log("Up");
+    //    }
+    //    else if (theAttack.angle > 135 && theAttack.angle <= 225)
+    //    {
+
+    //        animator.Play("Character_Shooting_Left");
+    //        UnityEngine.Debug.Log("Left");
+    //    }
+    //    else
+    //    {
+    //        animator.Play("Character_Shooting_Down");
+    //        UnityEngine.Debug.Log("Down");
+    //    }
+
+    //    yield return new WaitForSeconds(0.2f);
+    //    theAttack.isShooting = false;
+    //}
 
     // Update is called once per frame
     void Update()
