@@ -266,7 +266,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1f9d3ab9fc5f1b3418c36084caf13edf, type: 3}
-  m_Color: {r: 0.5471698, g: 0.54028714, b: 0.54028714, a: 1}
+  m_Color: {r: 0.3679245, g: 0.34247062, b: 0.34247062, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -590,7 +590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb3fe8fdfa180c4cbe3f3613f0305e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theAudio: {fileID: 1065714879}
   start: {fileID: 953513052}
   quit: {fileID: 1051423238}
   click_sound: title_button
@@ -688,7 +687,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 056ca3afc38b5104889f7ca6c6101d24, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1113,7 +1112,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f5a24f5fddc801147aa630fa853696d7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: eed082b27eaabf840b46368a497de9ce, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1207,6 +1206,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 54943016078348871, guid: 0ab5e6e01a3cf124db55566667be8118, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 76.700005
+      objectReference: {fileID: 0}
+    - target: {fileID: 54943016078348871, guid: 0ab5e6e01a3cf124db55566667be8118, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 59.71399
+      objectReference: {fileID: 0}
+    - target: {fileID: 54943016078348871, guid: 0ab5e6e01a3cf124db55566667be8118, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 60.8336
+      objectReference: {fileID: 0}
+    - target: {fileID: 54943016078348871, guid: 0ab5e6e01a3cf124db55566667be8118, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7363
+      objectReference: {fileID: 0}
     - target: {fileID: 4840356480415143056, guid: 0ab5e6e01a3cf124db55566667be8118, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1287,6 +1302,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7812416600827433514, guid: 0ab5e6e01a3cf124db55566667be8118, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f61adf6505d0a5946bdbd2f295d8f5bc, type: 3}
+    - target: {fileID: 7812416600827433514, guid: 0ab5e6e01a3cf124db55566667be8118, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025380209918439980, guid: 0ab5e6e01a3cf124db55566667be8118, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 12d8e1794675b344f9362b1eed3188bd, type: 3}
+    - target: {fileID: 8025380209918439980, guid: 0ab5e6e01a3cf124db55566667be8118, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8748635596188436129, guid: 0ab5e6e01a3cf124db55566667be8118, type: 3}
       propertyPath: m_Name
       value: FadeManager
@@ -1312,7 +1343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &5326569505747512016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1355,7 +1386,7 @@ MonoBehaviour:
     Volume: 1
     loop: 0
   - name: ghost_death
-    clip: {fileID: 8300000, guid: 74c453593fbe7c84da3575c49a1fd104, type: 3}
+    clip: {fileID: 8300000, guid: 83e9036c44d345b4cb659d271f83693e, type: 3}
     Volume: 1
     loop: 0
   - name: beep
@@ -1393,10 +1424,10 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1841210127}
   - {fileID: 2051103779}
-  - {fileID: 830476712}
-  - {fileID: 585426484}
+  - {fileID: 6660624039161299754}
   - {fileID: 1065714878}
   - {fileID: 1835022868}
-  - {fileID: 6660624039161299754}
+  - {fileID: 1841210127}
+  - {fileID: 585426484}
+  - {fileID: 830476712}
